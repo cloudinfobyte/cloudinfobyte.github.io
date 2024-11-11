@@ -1,0 +1,41 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Slider styling */
+.slider {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.slides {
+    display: flex;
+    transition: 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 300px;
+}
+
