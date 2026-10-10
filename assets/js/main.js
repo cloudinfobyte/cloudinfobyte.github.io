@@ -124,7 +124,9 @@
         form.reset();
         say("Thanks! Your message was sent. We will reply by email.", "ok");
       } else {
-        say("Could not send the message. Please try again" + (cfg.contactEmail ? " or email " + cfg.contactEmail : "") + ".", "err");
+        var why = res.j && res.j.message ? " (" + res.j.message + ")" : "";
+        if (window.console) console.error("Form send failed", res.j);
+        say("Could not send the message" + why + ". Please try again" + (cfg.contactEmail ? " or email " + cfg.contactEmail : "") + ".", "err");
       }
     }).catch(function () {
       say("Network error. Please try again" + (cfg.contactEmail ? " or email " + cfg.contactEmail : "") + ".", "err");
