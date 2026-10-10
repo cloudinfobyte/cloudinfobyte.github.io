@@ -9,8 +9,8 @@
  *   3. contactEmail      -> fallback: opens the visitor's mail app (mailto:) - works with no service
  */
 window.CIB_CONFIG = {
-  web3formsKey: "",          // e.g. "a1b2c3d4-...."
-  formspreeEndpoint: "",     // e.g. "https://formspree.io/f/abcdwxyz"
-  contactEmail: "",          // e.g. "hello@yourdomain.com"  (also shown on the page when set)
+  web3formsKey: "e9079b42-7b87-4cc6-a551-b7354b400250",         
+  formspreeEndpoint: "https://api.web3forms.com/submit",    
+  contactEmail: "cloudinfobyte@gmail.com",
   subjectPrefix: "CloudInfoByte enquiry"
 };
