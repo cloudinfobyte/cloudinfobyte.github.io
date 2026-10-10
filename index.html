@@ -1,47 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps and Cloud Services</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CloudInfoByte | Cloud, DevOps, Kubernetes &amp; MLOps Services</title>
+  <meta name="description" content="CloudInfoByte helps teams move from monolith to microservices, migrate to the cloud, and automate CI/CD, Kubernetes, monitoring, MLOps and AIOps end to end.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CloudInfoByte | Cloud, DevOps, Kubernetes &amp; MLOps Services">
+  <meta property="og:description" content="Monolith to microservices, cloud migration, CI/CD automation, Kubernetes, observability, MLOps and AIOps.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>DevOps and Cloud Services</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    
-    <section class="slider">
-        <div class="slides">
-            <div class="slide">
-                <img src="images/devops1.jpg" alt="DevOps Architecture">
-                <p>Comprehensive DevOps Architecture Solutions</p>
-            </div>
-            <div class="slide">
-                <img src="images/cloud1.jpg" alt="Cloud Migration">
-                <p>Seamless Cloud Migration Services</p>
-            </div>
-            <div class="slide">
-                <img src="images/devops2.jpg" alt="CI/CD Solutions">
-                <p>Efficient CI/CD Solutions to Accelerate Deployment</p>
-            </div>
-            <div class="slide">
-                <img src="images/devops3.jpg" alt="DevOps Automation">
-                <p>Automation with Ansible, Docker, and Kubernetes</p>
-            </div>
-            <div class="slide">
-                <img src="images/devops4.jpg" alt="Infrastructure as Code">
-                <p>Infrastructure as Code with Terraform</p>
-            </div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="CloudInfoByte home">
+        <img src="assets/img/favicon.svg" alt="" width="32" height="32">
+        <span>Cloud<b>Info</b>Byte</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#migration">Migration</a>
+        <a href="#pipeline">CI/CD</a>
+        <a href="#mlops">MLOps &amp; AIOps</a>
+        <a href="#stack">Stack</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-sm" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Cloud &middot; DevOps &middot; MLOps</p>
+          <h1>From monolith to <span class="grad">cloud-native</span>, with delivery you can trust.</h1>
+          <p class="lead">We design, migrate and automate your platform end to end: microservices, Kubernetes, CI/CD for Dev, QA and Production, observability, and MLOps/AIOps pipelines.</p>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Talk to an engineer</a>
+            <a class="btn btn-ghost" href="#services">Explore services</a>
+          </div>
+          <ul class="hero-points">
+            <li>Vendor-neutral: AWS, Azure, GCP, on-prem</li>
+            <li>Everything as code, reviewed and repeatable</li>
+            <li>Handover with runbooks, not lock-in</li>
+          </ul>
         </div>
+        <div class="term" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>pipeline.yml</span></div>
+<pre><code><span class="c"># every commit, every environment</span>
+<span class="k">stages</span>:
+  - <span class="s">build</span>      <span class="ok">&#10003;</span> image + SBOM
+  - <span class="s">test</span>       <span class="ok">&#10003;</span> unit / integration
+  - <span class="s">scan</span>       <span class="ok">&#10003;</span> SAST + image CVEs
+  - <span class="s">deploy-dev</span> <span class="ok">&#10003;</span> helm upgrade
+  - <span class="s">deploy-qa</span>  <span class="ok">&#10003;</span> smoke + e2e
+  - <span class="s">approve</span>    <span class="w">&#9679;</span> manual gate
+  - <span class="s">deploy-prod</span><span class="w">&#9679;</span> canary 10% &rarr; 100%
+  - <span class="s">observe</span>    <span class="ok">&#10003;</span> alerts + SLOs live</code></pre>
+        </div>
+      </div>
     </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2>Services across the full delivery lifecycle</h2>
+          <p>Pick one engagement or run the whole journey, from first assessment to a monitored production platform.</p>
+        </header>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="ico">&#9881;</div>
+            <h3>Monolith to microservices</h3>
+            <p>Domain-driven decomposition, strangler-pattern migration, API gateways, service contracts and data-ownership splits, delivered in safe increments.</p>
+            <p class="tags">DDD &middot; Strangler &middot; gRPC/REST &middot; Event-driven</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#9729;</div>
+            <h3>Cloud migration &amp; infrastructure</h3>
+            <p>Landing zones, networking, IAM, and lift-and-shift or re-platform moves, all provisioned with infrastructure as code.</p>
+            <p class="tags">Terraform &middot; Ansible &middot; AWS &middot; Azure &middot; GCP</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#8635;</div>
+            <h3>CI/CD, build &amp; deployment</h3>
+            <p>Pipelines that build, test, scan and ship automatically, with quality gates, artifact management and one-click rollback.</p>
+            <p class="tags">Jenkins &middot; GitHub Actions &middot; Argo CD &middot; Helm</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#9638;</div>
+            <h3>Kubernetes platform</h3>
+            <p>Cluster design, multi-environment namespaces, autoscaling, ingress, secrets, policies and day-2 operations on managed or self-hosted clusters.</p>
+            <p class="tags">EKS &middot; AKS &middot; GKE &middot; Helm &middot; Kustomize</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#9776;</div>
+            <h3>Dev, QA &amp; Production setup</h3>
+            <p>Consistent, automated environments with promotion workflows, test-data strategy, approvals and environment parity.</p>
+            <p class="tags">GitOps &middot; Feature flags &middot; Blue/green &middot; Canary</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#9889;</div>
+            <h3>Monitoring, alerts &amp; observability</h3>
+            <p>Metrics, logs and traces with actionable alerting, dashboards, SLOs and on-call routing so you hear about issues before users do.</p>
+            <p class="tags">Prometheus &middot; Grafana &middot; ELK/Loki &middot; OpenTelemetry</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#8644;</div>
+            <h3>Platform migrations</h3>
+            <p>Move between CI tools, source hosts and runtimes without stopping delivery, e.g. Jenkins to GitHub Actions or VMs to containers.</p>
+            <p class="tags">Jenkins &middot; GitHub &middot; GitHub Actions &middot; GitLab</p>
+          </article>
+          <article class="card reveal">
+            <div class="ico">&#10022;</div>
+            <h3>MLOps, AIOps &amp; algorithm setups</h3>
+            <p>Training and serving pipelines, model registry and monitoring, plus AI-assisted operations for noise reduction and faster incident response.</p>
+            <p class="tags">MLflow &middot; Kubeflow &middot; Feature stores &middot; Drift checks</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIGRATION -->
+    <section class="section alt" id="migration">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Migration approach</p>
+          <h2>Incremental by design, so the business keeps running</h2>
+          <p>Big-bang rewrites fail. We move one capability at a time behind a stable interface, measure each step, and keep a clear path back.</p>
+          <a class="btn" href="#contact">Plan your migration</a>
+        </div>
+        <ol class="steps">
+          <li><b>Assess</b><span>Inventory services, dependencies, data flows, risks and cost. Agree success metrics.</span></li>
+          <li><b>Plan</b><span>Target architecture, migration waves, rollback plan and a delivery roadmap.</span></li>
+          <li><b>Decompose</b><span>Carve out services behind a gateway, split data ownership, add contract tests.</span></li>
+          <li><b>Automate</b><span>Infrastructure as code, CI/CD and environment promotion for every service.</span></li>
+          <li><b>Operate</b><span>Observability, alerts, runbooks and a handover your team can run.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section class="section" id="pipeline">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Build &amp; release</p>
+          <h2>One automated path from commit to production</h2>
+          <p>Each change flows through the same gates in Dev, QA and Production, so releases are boring and rollbacks are fast.</p>
+        </header>
+        <ol class="flow">
+          <li><b>Commit</b><span>PR checks, branch policy</span></li>
+          <li><b>Build</b><span>Container image, SBOM</span></li>
+          <li><b>Test</b><span>Unit, integration, contract</span></li>
+          <li><b>Secure</b><span>SAST, secrets, CVE scan</span></li>
+          <li><b>Dev</b><span>Auto-deploy</span></li>
+          <li><b>QA</b><span>Smoke + e2e suites</span></li>
+          <li><b>Prod</b><span>Approval, canary, rollback</span></li>
+          <li><b>Observe</b><span>Alerts, SLOs, feedback</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- MLOPS -->
+    <section class="section alt" id="mlops">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">MLOps &amp; AIOps</p>
+          <h2>Take models from notebook to monitored production</h2>
+        </header>
+        <div class="two">
+          <article class="panel reveal">
+            <h3>MLOps</h3>
+            <ul class="check">
+              <li>Reproducible training pipelines and experiment tracking</li>
+              <li>Model registry, versioning and approval workflow</li>
+              <li>Containerised serving with autoscaling on Kubernetes</li>
+              <li>Data and model drift monitoring with retrain triggers</li>
+              <li>Algorithm and model setup: tuning, validation and CI for ML code</li>
+            </ul>
+          </article>
+          <article class="panel reveal">
+            <h3>AIOps</h3>
+            <ul class="check">
+              <li>Alert correlation and de-duplication to cut noise</li>
+              <li>Anomaly detection on metrics and logs</li>
+              <li>Automated runbooks and first-response remediation</li>
+              <li>Capacity and cost forecasting</li>
+              <li>Incident timelines and post-incident insights</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Technology</p>
+          <h2>Tools we work with every day</h2>
+        </header>
+        <div class="stack">
+          <div><h4>CI/CD</h4><p class="chips"><span>Jenkins</span><span>GitHub Actions</span><span>GitHub</span><span>Argo CD</span><span>GitLab CI</span></p></div>
+          <div><h4>Containers &amp; orchestration</h4><p class="chips"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>Kustomize</span><span>Istio</span></p></div>
+          <div><h4>Infrastructure as code</h4><p class="chips"><span>Terraform</span><span>Ansible</span><span>CloudFormation</span><span>Pulumi</span></p></div>
+          <div><h4>Monitoring &amp; logging</h4><p class="chips"><span>Prometheus</span><span>Grafana</span><span>Alertmanager</span><span>ELK</span><span>Loki</span><span>OpenTelemetry</span></p></div>
+          <div><h4>Cloud platforms</h4><p class="chips"><span>AWS</span><span>Azure</span><span>Google Cloud</span><span>On-prem / hybrid</span></p></div>
+          <div><h4>ML platform</h4><p class="chips"><span>MLflow</span><span>Kubeflow</span><span>Airflow</span><span>KServe</span><span>Feast</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT -->
+    <section class="section alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Ways to work together</p>
+          <h2>Engagement models</h2>
+        </header>
+        <div class="cards three">
+          <article class="card reveal"><h3>Assessment</h3><p>A short, fixed-scope review of your architecture, pipelines and cloud setup, ending in a prioritised roadmap.</p></article>
+          <article class="card reveal"><h3>Project delivery</h3><p>Defined outcomes such as a migration wave, a Kubernetes platform or a CI/CD rebuild, with milestones and handover.</p></article>
+          <article class="card reveal"><h3>Ongoing support</h3><p>Embedded engineers or managed operations for monitoring, upgrades, cost tuning and release support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+        </header>
+        <details><summary>Do we have to rewrite our application to use microservices?</summary><p>No. We usually start with the strangler pattern: new or extracted capabilities run as services behind a gateway while the monolith keeps serving the rest. You migrate in steps, not all at once.</p></details>
+        <details><summary>Which cloud do you work with?</summary><p>AWS, Azure and Google Cloud, plus hybrid and on-prem Kubernetes. Recommendations follow your workload, skills and cost goals, not a vendor preference.</p></details>
+        <details><summary>Can you move us from Jenkins to GitHub Actions?</summary><p>Yes. We inventory your existing jobs, port them to reusable workflows, run both in parallel, then cut over once results match.</p></details>
+        <details><summary>What do alerts and monitoring cover?</summary><p>Infrastructure, application and business metrics, centralised logs and traces, with alert rules tied to SLOs and routed to the right on-call channel.</p></details>
+        <details><summary>Do you only build, or do you also operate?</summary><p>Both are available. Many teams use us to build and hand over; others keep us on for ongoing operations and release support.</p></details>
+        <details><summary>How do we get started?</summary><p>Send a short note through the form below describing your current setup and goals. We reply with proposed next steps.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section alt" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Tell us about your platform</h2>
+          <p>Share where you are today and where you want to be. A short description is enough to start the conversation.</p>
+          <ul class="contact-list">
+            <li id="contact-email-row" hidden>Email: <a id="contact-email" href="#"></a></li>
+            <li>We read every message and reply by email.</li>
+          </ul>
+        </div>
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120">
+          </div>
+          <div class="field">
+            <label for="company">Company <span class="opt">(optional)</span></label>
+            <input id="company" name="company" type="text" autocomplete="organization" maxlength="100">
+          </div>
+          <div class="field">
+            <label for="topic">I need help with</label>
+            <select id="topic" name="topic">
+              <option>Monolith to microservices</option>
+              <option>Cloud migration &amp; infrastructure</option>
+              <option>CI/CD, build &amp; deployment</option>
+              <option>Kubernetes platform</option>
+              <option>Monitoring &amp; alerting</option>
+              <option>Platform migration (Jenkins / GitHub / Actions)</option>
+              <option>MLOps / AIOps / algorithm setup</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" maxlength="3000"></textarea>
+          </div>
+          <!-- honeypot: real visitors never see or fill this -->
+          <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" class="hp">
+          <button class="btn" type="submit" id="submit-btn">Send message</button>
+          <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-row">
+      <div>
+        <a class="brand" href="#top"><img src="assets/img/favicon.svg" alt="" width="28" height="28"><span>Cloud<b>Info</b>Byte</span></a>
+        <p class="muted">Cloud, DevOps, Kubernetes and MLOps engineering.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#migration">Migration</a>
+        <a href="#pipeline">CI/CD</a>
+        <a href="#mlops">MLOps &amp; AIOps</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="wrap copy">&copy; <span id="year">2026</span> CloudInfoByte. All rights reserved.</div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-

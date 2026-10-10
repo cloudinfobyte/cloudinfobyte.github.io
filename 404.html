@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | CloudInfoByte</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 24px;
+      background: #0b1220; color: #e6edf7; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    h1 { font-size: 4rem; margin: 0; background: linear-gradient(135deg, #22d3ee, #6366f1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    p { color: #9fb0c9; }
+    a { display: inline-block; margin-top: 12px; padding: 12px 22px; border-radius: 10px; font-weight: 600; text-decoration: none;
+      background: linear-gradient(135deg, #22d3ee, #6366f1); color: #04121a; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>404</h1>
+    <p>That page could not be found.</p>
+    <!-- relative to the site root; works for user sites and project sites alike -->
+    <a href="./" id="home">Back to home</a>
+  </main>
+  <script>
+    // On a project site (user.github.io/repo/) the 404 can be served from a deeper path; resolve home from the first segment.
+    (function () {
+      var parts = location.pathname.split("/").filter(Boolean);
+      if (location.hostname.endsWith("github.io") && parts.length) document.getElementById("home").href = "/" + parts[0] + "/";
+      else document.getElementById("home").href = "/";
+    })();
+  </script>
+</body>
+</html>
